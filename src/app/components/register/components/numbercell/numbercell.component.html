@@ -1,0 +1,97 @@
+<div id="containerNumberCell">
+  <div class="headerContent">
+    <div class="divImgtext">
+    <div>
+      <ion-img class="img-style" src="../../../../../assets/images/coink.png" />
+    </div>
+
+    <div>
+
+      <ion-text>
+        Para comenzar, por favor ingresa <strong>tu número celular.</strong>
+      </ion-text>
+    </div>
+
+  </div>
+  <ion-item-divider> </ion-item-divider>
+<br>
+  <div class="content-input" >
+    <form [formGroup]="formPhoneNumber">
+      <ion-input  [maskito]="phoneMask"
+      [maskitoElement]="maskPredicate" formControlName="phoneNumber" placeholder="(X X X - X X X X X X )" type="text" required="true"></ion-input>
+
+    </form>
+
+  </div>
+  <!--Alerta-->
+<div *ngIf="!isSuccesPhone">
+  <ion-alert
+  trigger="present-alert"
+  message="Se requiere ingresar el número de celular para continuar"
+
+></ion-alert>
+</div>
+
+<div>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="4">
+        <ion-label expand="full" (click)=" writePhoneNumber(1)">1</ion-label>
+      </ion-col>
+      <ion-col  size="4">
+        <ion-label expand="full" (click)=" writePhoneNumber(2)">2</ion-label>
+      </ion-col>
+      <ion-col size="4">
+        <ion-label expand="full" (click)=" writePhoneNumber(3)">3</ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="4">
+        <ion-label expand="full" (click)=" writePhoneNumber(4)">4</ion-label>
+      </ion-col>
+      <ion-col size="4">
+        <ion-label expand="full" (click)=" writePhoneNumber(5)">5</ion-label>
+      </ion-col>
+      <ion-col size="4">
+        <ion-label expand="full" (click)=" writePhoneNumber(6)">6</ion-label>
+      </ion-col>
+
+    </ion-row>
+    <ion-row>
+      <ion-col size="4">
+        <ion-label expand="full" (click)=" writePhoneNumber(7)">7</ion-label>
+      </ion-col>
+      <ion-col size="4">
+        <ion-label expand="full" (click)=" writePhoneNumber(8)">8</ion-label>
+      </ion-col>
+      <ion-col size="4">
+        <ion-label expand="full" (click)=" writePhoneNumber(9)">9</ion-label>
+      </ion-col>
+
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="4" class="style-icon">
+       <ion-img   expand="full" (click)="deletedNumber()"  src="../../../../../assets/icon/delete.png"></ion-img>
+      </ion-col >
+      <ion-col size="4" class="style-icon">
+        <ion-label expand="full" (click)="writePhoneNumber(0)">0</ion-label>
+      </ion-col>
+      <ion-col size="4" class="style-icon">
+
+          <ion-img (click)="avanzarPaso()"  id="present-alert" expand="full" [ngClass]="!isSuccesPhone? 'style-btn-check':'style-btn-check-succes'"src="../../../../../assets/icon/Check.png"></ion-img>
+
+      </ion-col>
+
+    </ion-row>
+    <!-- Más filas y botones para otros dígitos -->
+  </ion-grid>
+
+</div>
+
+
+
+</div>
+
+
+</div>

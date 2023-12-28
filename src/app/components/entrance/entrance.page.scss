@@ -1,0 +1,93 @@
+#containerEntrance {
+
+  left: 0px;
+  right: 0px;
+  top: calc(var(--offset-top) * -1);
+  bottom: calc(var(--offset-bottom) * -1);
+  position: absolute;
+  background: white;
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+
+.div-txt{
+
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.div-btn{
+
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+button-native {
+
+    border-radius: 20px;
+    width: 100%;
+    background: #1EEA00 !important;
+    color:#004B40
+
+}
+#container strong {
+font-size: 20px;
+line-height: 26px;
+}
+
+#container p {
+font-size: 16px;
+line-height: 22px;
+
+color: #8c8c8c;
+
+margin: 0;
+}
+
+#container a {
+text-decoration: none;
+}
+
+
+label{
+
+font-size: 18px;
+font-weight: bold;
+width: 295px;
+text-align: center;
+color:#1EEA00;
+}
+.button-native {
+background: #1EEA00 !important;
+  color:#004B40;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  position: relative;
+  align-items: center;
+  width: 324px !important;
+  height: 100%;
+  min-height: inherit;
+  outline: none;
+  line-height: 1;
+  cursor: pointer;
+  box-sizing: border-box;
+
+}
+ion-button{
+
+    --background-hover: #9ce0be;
+font-weight: bold;
+  width: 324px;
+  --padding-top: 10px;
+  --padding-bottom: 10px;
+  margin-bottom: 12px;
+}
+
+}

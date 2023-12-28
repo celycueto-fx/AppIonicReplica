@@ -1,0 +1,130 @@
+
+#containerAccount{
+  color: #757575;
+ padding-top: 56px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+
+
+.divImgtext{
+  align-items: center;
+  display: flex;
+
+}
+.title-form{
+  color: #004B40;
+  font-size: 16px;
+  font-family: 'montserrat';
+  font-weight: bold;
+  display: flex;
+  justify-content: start;
+  text-align: start;
+}
+.form-style{
+  padding-top: 20px;
+  display:flex;
+  flex-direction: column;
+
+}
+.formContent{
+  display: flex;
+  justify-content: start;
+  text-align: start;
+  flex-direction: column;
+}
+
+ion-label:hover {
+  color: #1EEB00;
+  background-color: transparent !important; /* Quita el fondo al hacer hover */
+
+  background: #757575;/* Cambia el color al hacer hover */
+  /* Otros estilos que desees aplicar al hacer hover */
+}
+ion-img {
+  width: 70px !important;
+}
+
+.ion-col.md{
+  border: none;
+  margin: 0px;
+  font-size:  32px;
+  background: white !important;
+  color: #004B40;
+
+
+}
+.content-input{
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 20px;
+  box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headerContent{
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  height: fit-content;
+}
+
+
+.titleSpan{
+
+  color:#004B40;
+  font-size: 15px;
+  display: flex;
+  justify-content: start;
+  font-family: 'Montserrat';
+  text-align: start;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.style-icon{
+ width: 40px;
+ align-items: center;
+ height: 40px;
+ justify-content: center;
+ display: flex;
+ text-align: center;
+
+}
+
+.content-textDescript{
+  display: flex;
+  justify-content:start;
+  flex-direction: column;
+  text-align: start;
+  font-size: 16px;
+  margin-left: 20px;
+}
+.title-form-config-account{
+  color:#004B40;
+  font-size: 15px;
+  display: flex;
+  justify-content: start;
+  font-family: 'Montserrat';
+  text-align: start;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top:20px;
+}
+
+.button-native {
+  --box-shadow:none!important;
+}
+.color-icon{
+  color: #212121;
+}
+
+
+}

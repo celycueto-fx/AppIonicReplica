@@ -1,0 +1,161 @@
+<div id="containerAccount">
+  <div class="headerContent">
+    <div class="divImgtext">
+      <div>
+        <ion-img src="../../../../../assets/images/Oink-M.png" />
+      </div>
+      <div class="content-textDescript">
+        <span class="titleSpan">¿CUÁLES SON TUS DATOS?</span>
+        <ion-text> Ahora necesitamos saber algunos datos tuyos </ion-text>
+      </div>
+    </div>
+    <ion-item-divider> </ion-item-divider>
+  <!--Alerta-->
+
+    <div class="form-style">
+      <div class="formContent">
+        <div>
+          <div class="title-form">
+            <span>Documento de identidad</span>
+          </div>
+          <form [formGroup]="formDocId">
+          <div>
+            <ion-item>
+              <ion-select placeholder="Tipo de documento"   interface="popover" formControlName="typeDoc">
+                <ion-select-option *ngFor="let option of options" [value]="option.description">
+                  {{ option.description }}
+                </ion-select-option>
+              </ion-select>
+            </ion-item>
+          </div>
+          <div>
+            <ion-item>
+            <ion-input
+            formControlName="numDoc"
+             placeholder="Número de documento"
+
+            ></ion-input>
+            </ion-item>
+          </div>
+          <div>
+            <ion-item>
+            <ion-input
+            formControlName="documentIssueDate"
+              placeholder="Fecha de expedición del documento"
+
+            ></ion-input>
+            </ion-item>
+          </div>
+          <div>
+            <ion-item>
+            <ion-input
+            formControlName="birthDate"
+              placeholder="Fecha de nacimiento"
+            ></ion-input>
+          </ion-item>
+          </div>
+          <div>
+            <ion-item>
+              <ion-select placeholder="Seleccione una opcion"   interface="popover"  formControlName="gender">
+                <ion-select-option value="Femenino">Femenino</ion-select-option>
+                <ion-select-option value="Masculino">Masculino</ion-select-option>
+
+              </ion-select>
+            </ion-item>
+          </div>
+        </form>
+        </div>
+
+        <!--config account-->
+        <div>
+          <div class="title-form-config-account">
+            <span>Configura tu cuenta</span>
+          </div>
+          <form [formGroup]="formConfigAccount">
+<!--Alert-->
+            <div *ngIf="isSuccesAccountInfo">
+              <ion-alert
+              trigger="present-alertAccount"
+              message="Verifique los campos del PIN para continuar"
+
+            ></ion-alert>
+            </div>
+
+          <ion-list>
+
+              <ion-input
+              formControlName="email"
+                type="email"
+                required="true"
+                errorText="Invalid email"
+                placeholder="Correo electrónico"
+              >
+              </ion-input>
+              <div *ngIf="formConfigAccount?.get('email')?.dirty">El email no es válido</div>
+
+
+              <ion-input
+              formControlName="confirmEmail"
+                type="email"
+                required="true"
+                errorText="Invalid email"
+                placeholder="Confirmar correo electrónico"
+              >
+              </ion-input>
+              <div *ngIf="formConfigAccount?.get('confirmEmail')?.dirty">El email no es válido</div>
+
+            <ion-item>
+              <ion-input
+              formControlName="securityPin"
+              type="{{showPasswordConfirm ? 'text' : 'password'}}"
+                placeholder="PIN de seguridad"
+              >
+                <ion-button fill="clear" slot="end" >
+                  <mat-icon
+                  (click)="togglePassword()"
+                    class="color-icon"
+                    lot="end"
+                    >{{ showPassword  ? 'visibility' : 'visibility_off' }}</mat-icon
+                  >
+                </ion-button>
+
+              </ion-input>
+              <div *ngIf="formConfigAccount?.get('securityPin')?.invalid">Es requerido</div>
+            </ion-item>
+            <ion-item>
+              <ion-input
+              formControlName="confimSecurityPin"
+              required="true"
+                type="{{showPasswordConfirm ? 'text' : 'password'}}"
+                placeholder="Confirmar PIN de seguridad"
+              >
+                <ion-button fill="clear" slot="end"  (click)="togglePasswordConfirm()">
+                  <mat-icon
+                    class="color-icon"
+                    lot="end"
+                    >{{ showPasswordConfirm ? 'visibility' : 'visibility_off' }}</mat-icon
+                  >
+                </ion-button>
+              </ion-input>
+              <div *ngIf="formConfigAccount?.get('confimSecurityPin')?.dirty">Es requerido</div>
+            </ion-item>
+
+          </ion-list>
+          </form>
+          <div>
+            <ion-button
+              class="button-native"
+              expand="block"
+              color="medium"
+              shape="round"
+              id="present-alertAccount"
+              (click)="avanzarPaso()"
+              >SIGUIENTE</ion-button
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+  </div>
+</div>
