@@ -1,4 +1,4 @@
-# Detalles de la prueb
+# Detalles de la prueba
  ### se aplicaron princios solid
  ### organizacion de proyecto en carpetas y sub componentes
 
