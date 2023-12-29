@@ -1,0 +1,61 @@
+<div id="containerNumberCell">
+  <div class="headerContent">
+    <div class="divImgtext">
+    <div>
+      <img ion-img class="img-style" src="../../../../../assets/images/coink.png" />
+    </div>
+    <div>
+
+      <ion-text>
+        Para comenzar, por favor ingresa <strong>tu número celular.</strong>
+      </ion-text>
+    </div>
+
+  </div>
+  <ion-item-divider> </ion-item-divider>
+<br>
+  <div class="content-input" >
+    <form [formGroup]="formPhoneNumber">
+      <input ion-input  [maskito]="phoneMask"
+      [maskitoElement]="maskPredicate" formControlName="phoneNumber" placeholder="(X X X - X X X X X X )" type="text" required="true">
+
+    </form>
+
+  </div>
+  <!--Alerta-->
+<div *ngIf="!isSuccesPhone">
+  <ion-alert
+  trigger="present-alert"
+  message="Se requiere ingresar el número de celular para continuar"
+
+></ion-alert>
+</div>
+
+
+<div class="teclado">
+
+
+  <button ion-label expand="full" (click)=" writePhoneNumber(1)">1</button>
+  <button ion-label expand="full" (click)=" writePhoneNumber(2)">2</button>
+  <button ion-label expand="full" (click)=" writePhoneNumber(3)">3</button>
+  <button ion-label expand="full" (click)=" writePhoneNumber(4)">4</button>
+  <button ion-label expand="full" (click)=" writePhoneNumber(5)">5</button>
+  <button ion-label expand="full" (click)=" writePhoneNumber(6)">6</button>
+  <button ion-label expand="full" (click)=" writePhoneNumber(7)">7</button>
+  <button ion-label expand="full" (click)=" writePhoneNumber(8)">8 </button>
+  <button ion-label expand="full" (click)=" writePhoneNumber(9)">9</button>
+
+ <img ion-img    class="style-icon" expand="full" (click)="deletedNumber()"  src="../../../../../assets/icon/delete.png">
+ <button ion-label   class="style-icon"expand="full" (click)="writePhoneNumber(0)">0</button>
+ <img ion-img   class="style-icon" (click)="avanzarPaso()"  id="present-alert" expand="full" [ngClass]="!isSuccesPhone? 'style-btn-check':'style-btn-check-succes'"src="../../../../../assets/icon/Check.png">
+
+<!-- Más filas y botones para otros dígitos -->
+
+</div>
+
+
+
+</div>
+
+
+</div>

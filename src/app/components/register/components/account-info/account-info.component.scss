@@ -1,0 +1,133 @@
+#containerAccount {
+  color: #757575;
+  padding-top: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+
+  .coloBtnNext {
+    border-radius: 40px;
+    width: 326px;
+    height: 58px;
+    background: #1eea00 !important;
+    color: #004b40;
+    padding: 20px;
+  }
+  .linedivider {
+    content: '';
+    display: block;
+    border-bottom: 1px dashed #333; /* Estilo y color de la línea */
+    margin-bottom: 10px; /* Espacio opcional debajo de la línea */
+  }
+
+  select {
+    width: 311px;
+    height: 48px;
+    margin-bottom: 0px;
+    border: none;
+    background: white;
+  }
+  input {
+    width: 311px;
+    height: 48px;
+    margin-bottom: 0px;
+    border: none;
+  }
+  .divImgtext {
+    margin-left: 40px;
+    margin-right: 20px;
+    align-items: center;
+    display: flex;
+  }
+  .title-form {
+    color: #004b40;
+    font-size: 16px;
+    font-family: "montserrat";
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-start;
+    text-align: start;
+  }
+  .form-style {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  .formContent {
+    margin: 40px;
+    display: flex;
+    justify-content: flex-start;
+    text-align: start;
+    flex-direction: column;
+  }
+  .content-input {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 20px;
+    box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.alerttext{
+  color:red;
+}
+  .headerContent {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    height: fit-content;
+  }
+
+  .titleSpan {
+    color: #004b40;
+    font-size: 15px;
+    display: flex;
+    justify-content: flex-start;
+    font-family: "Montserrat";
+    text-align: start;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .style-icon {
+    width: 40px;
+    align-items: center;
+    height: 40px;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+  }
+
+  .content-textDescript {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    text-align: start;
+    font-size: 16px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+  span {
+    margin-left: 20px;
+  }
+  .title-form-config-account {
+    color: #004b40;
+    font-size: 15px;
+    display: flex;
+    justify-content: flex-start;
+    font-family: "Montserrat";
+    text-align: start;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-right: 40px;
+  }
+  .color-icon {
+    color: #212121;
+  }
+}

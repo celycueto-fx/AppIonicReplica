@@ -1,0 +1,114 @@
+#containerFinish {
+  color: #757575;
+  padding-top: 60px;
+  display: flex;
+  justify-content: center;
+
+  flex-direction: column;
+  height: fit-content;
+  .terminosCondition {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    justify-content: flex-start;
+    flex-direction: row;
+    color: #004b40;
+  }
+  .titleDesription {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: #004b40;
+    font-size: 15px;
+    display: flex;
+    justify-content: flex-start;
+    font-family: "Montserrat";
+    text-align: start;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .divImgtext {
+    align-items: center;
+    display: flex;
+  }
+  .parrafContent {
+    color: #323232;
+    font-size: 14px;
+    text-align: start;
+    margin-bottom: 20px;
+  }
+  .readcontract {
+    color: #004b40;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-color: #004b40;
+  }
+  .headerContent {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    height: fit-content;
+  }
+
+  .style-btn-check {
+    background: #d3d3d3;
+    border-radius: 60px;
+    border: none;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+  }
+
+  .style-btn-check-succes {
+    background: #1eeb00;
+    border-radius: 60px;
+    border: none;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+  }
+
+  .style-icon {
+    width: 40px;
+    align-items: center;
+    height: 40px;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+  }
+
+  .titleSpan {
+    color: #004b40;
+    font-size: 15px;
+    display: flex;
+    justify-content: flex-start;
+    font-family: "Montserrat";
+    text-align: start;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .coloBtnNext {
+    border-radius: 40px;
+    width: 326px;
+    height: 58px;
+    background: #1eea00 !important;
+    color: #004b40;
+    padding: 20px;
+  }
+  .img-coink {
+    width: 100px;
+    height: 80px;
+  }
+  .content-textDescript {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    text-align: start;
+    line-height: 1.2;
+    font-size: 14px;
+    margin-left: 20px;
+  }
+}

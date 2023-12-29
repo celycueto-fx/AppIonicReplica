@@ -1,0 +1,48 @@
+<div id="containerFinish">
+  <div class="headerContent">
+    <div class="divImgtext">
+      <div>
+        <img ion-img class="img-coink" src="../../../../../assets/images/OinkPolicia.png" />
+      </div>
+      <div class="content-textDescript">
+        <span class="titleSpan">ESTAS MUY CERCA DE SER PARTE DE COINK.</span>
+        <ion-text> Solo es necesario que leas detenidamente el contrato que se encuentra al final de esta pantalla y lo aceptes.</ion-text>
+      </div>
+    </div>
+    <ion-item-divider> </ion-item-divider>
+</div>
+<!--Alert-->
+<div *ngIf="noTermCondition">
+  <ion-alert
+  trigger="present-alertTerm"
+  message="Acepte los terminos y condiciones"
+
+></ion-alert>
+</div>
+<div>
+  <ion-text class="titleDesription">
+    LO MÁS IMPORTANTE
+  </ion-text>
+  <div>
+    <div>
+      <ion-text class="parrafContent">
+        Para la apertura del Depósito de Bajo Monto en COINK debes ser una persona natural que de acuerdo con nuestra legislación vigente te encuentres en plena capacidad para adquirir derechos y contraer obligaciones.<br><br>
+         Abrirás una cuenta COINK de Bajo Monto la cual te permitirá tener un saldo hasta por 8 salarios mínimos en el mes y realizar débitos por el mismo valor. Si deseas sobrepasar estos límites debes solicitarnos la apertura de un Depósito Ordinario COINK Persona Natural.<br><br>
+          Solo puedes tener una cuenta COINK de Bajo Monto y podrás utilizar tu dispositivo móvil para consultar tu saldo, tus movimientos, realizar tus transacciones y administrar tu cuenta.<br><br>
+           Recuerda que no necesitas saldo mínimo ni monto inicial para su apertura.
+      </ion-text>
+    </div>
+</div>
+<div class="readcontract">
+  <ion-text  >Lee tu contrato</ion-text>
+</div>
+<div class="terminosCondition">
+  <input type="checkbox" id="check"  [(ngModel)]="acceptedTerms"/>
+
+  <ion-text>He leído ya acepto el contrato</ion-text>
+</div>
+<div>
+  <button  class="coloBtnNext" ion-button expand="full" color="primary" id="present-alertTerm" shape="round" (click)="finishRegister()">ACEPTAR</button>
+</div>
+</div>
+
